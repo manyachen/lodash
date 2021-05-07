@@ -66,6 +66,16 @@ const _ = {
     var dropNumber = array.findIndex(cb);
     var dropArray = this.drop(array, dropNumber);
     return dropArray;
+  },
+  chunk(array,size=1)
+  {
+    var arrayChunks = [];
+    for(var counter = 0; counter<array.length; counter = counter + size)
+    {
+      var arrayChunk = array.slice(counter, counter+size);
+      arrayChunks.push(arrayChunk);
+    }
+    return arrayChunks;
   }
   
 };
